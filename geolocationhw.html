@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geo API</title>
+</head>
+<body>
+    <h1>Find your location</h1>
+    <button type="submit" onclick="geo()">location</button>
+    <br>
+    <div id="demo"></div>
+    <script>
+        src="https://maps.googleapis.com/maps/api/js>"
+        var a = document.getElementById("demo");
+        function geo(){
+            if(window.navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(pos);
+                alert("supporting")
+            }
+            else{
+                alert("not supporting")}
+        }
+        function pos(position){
+        a.innerHTML= "latitude"+ position.coords.latitude +
+        "longitude" + position.coords.longitude;
+        var lating= new google.lating(24.9207,67.0657);
+        }
+
+    </script>
+</body>
+</html>
